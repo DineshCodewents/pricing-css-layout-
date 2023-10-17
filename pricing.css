@@ -1,0 +1,192 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+.image1,
+.image2 {
+    position: fixed;
+    width: 25vw;
+    height: 25vh;
+    z-index: -1;
+}
+.image1 {
+    bottom: 10px;
+    left: 0;
+}
+
+.image2 {
+    top: 50px;
+    right: 20px;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.price-row h1{
+    padding: 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color:hsl(233, 13%, 49%);
+}
+.flex-box-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.column {
+    margin: 0 10px;
+}
+
+.check-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: hsl(234, 14%, 74%);
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+    border-radius: 25px;
+}
+
+.switch:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 2px;
+    bottom: 2px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+input:checked + .switch {
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+input:checked + .switch:before {
+    transform: translateX(25px);
+}
+.card-container {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width:100%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.salary-column {
+    background-color: #f9f9f9;
+    color:hsl(233, 13%, 49%);
+    padding-top: 0;
+    padding-bottom: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+    
+}
+.col {
+    width: 250px;
+}   
+.salary-column h2 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+.salary-column:hover {
+    color: white;
+    transform: translateY(-10px) scale(1.05);
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.salary-column:hover .currency,
+.salary-column:hover .dollor,
+.salary-column:hover.details
+.salary-column:hover.details hr {
+    color: white;
+}
+.price-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.currency {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 5px;
+    color: hsl(232, 13%, 33%);
+}
+
+.dollor {
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(232, 13%, 33%);
+    font-weight: bold;
+    margin: 0;
+}
+
+.details h2 {
+    font-size: 10px;
+    margin: 5px 0;
+}
+.btn {
+    
+    font-weight: 700;
+    font-size: 10px;
+    align-items: center;
+    color:linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    height: 30px;
+    width: 90%;
+    background: white;
+    margin-bottom: 20px;
+}
+.btn:hover {
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+    border: 1px solid white;
+}
+
